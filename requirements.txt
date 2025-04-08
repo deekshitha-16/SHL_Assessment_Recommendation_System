@@ -7,6 +7,6 @@ torch
 matplotlib
 requests
 bs4
-sentence-transformers==2.2.2
+sentence-transformers==1.2.1
 transformers==4.36.2
 python-dotenv
