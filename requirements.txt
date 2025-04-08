@@ -1,0 +1,12 @@
+streamlit
+pandas
+google-generativeai
+selenium
+numpy
+torch
+matplotlib
+requests
+bs4
+sentence-transformers==2.2.2
+transformers==4.36.2
+python-dotenv
