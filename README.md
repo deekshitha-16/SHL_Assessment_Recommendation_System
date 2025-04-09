@@ -52,7 +52,7 @@ Try it out @ https://shlassessmentrecommendationsystem.streamlit.app [Example Te
    - Users can input queries directly in a web interface.
    - Receives and displays the top recommended assessments along with their details.
   
-## Test Cases to try 
+## Test Cases 
 - I am hiring for Java developers who can also collaborate effectively with my business teams. Looking
 for an assessment(s) that can be completed in 40 minutes.
 - Looking to hire mid-level professionals who are proficient in Python, SQL and Java Script. Need an
