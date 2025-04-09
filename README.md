@@ -51,6 +51,10 @@ Try it out @ https://shlassessmentrecommendationsystem.streamlit.app [Example Te
 5. **Streamlit Interface**:
    - Users can input queries directly in a web interface.
    - Receives and displays the top recommended assessments along with their details.
+
+## Performance
+- NLP Model - Recall@5 = 0.85 and MAP@5 = 0.71
+- NLP + LLM Model - Recall@5 = 1.0 and MAP@5 = 1.0
   
 ## Test Cases 
 - I am hiring for Java developers who can also collaborate effectively with my business teams. Looking
