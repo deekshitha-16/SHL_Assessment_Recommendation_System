@@ -51,3 +51,13 @@ Try it out @ https://shlassessmentrecommendationsystem.streamlit.app [Example Te
 5. **Streamlit Interface**:
    - Users can input queries directly in a web interface.
    - Receives and displays the top recommended assessments along with their details.
+  
+## Test Cases to try 
+- I am hiring for Java developers who can also collaborate effectively with my business teams. Looking
+for an assessment(s) that can be completed in 40 minutes.
+- Looking to hire mid-level professionals who are proficient in Python, SQL and Java Script. Need an
+assessment package that can test all skills with max duration of 60 minutes.
+- I am hiring for an analyst and wants applications to screen using Cognitive and personality tests,
+what options are available within 45 mins.
+- https://www.linkedin.com/jobs/view/research-engineer-ai-at-shl-4194768899/?originalSubdomain=in
+- Want to assess communication and teamwork skills in under 30 minutes.
