@@ -138,7 +138,8 @@ Your task is to go through each assessment and determine if it truly matches the
 - Ignore irrelevant matches, even if score is high
 
 Return only the assessments that are **highly relevant** to the query. 
-Use your understanding of language and hiring to filter smartly.
+Use your understanding of language and hiring to filter smartly. But you have to return something atleast 1 assessment.
+You have to return minimum 1 assessment and maximum 10(only relevant ones). You cannot return empty json.
 
 Respond in clean JSON format:
 [
@@ -156,7 +157,6 @@ Respond in clean JSON format:
   ...
 ]
 
-If none are relevant, return: `[]`
 ---
 Assessments:
 {top_results}
@@ -164,7 +164,6 @@ Assessments:
 
     response = gemini_model.generate_content(prompt)
     return response.text.strip()
-
 
 def query_handling_using_LLM_updated(query):
     url = extract_url_from_text(query)
