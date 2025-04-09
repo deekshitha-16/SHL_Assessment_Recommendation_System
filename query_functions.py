@@ -10,16 +10,6 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-api_key = os.getenv("GEMINI_API_KEY")
-
-
-model = SentenceTransformer('all-MiniLM-L6-v2')
-
-genai.configure(api_key=api_key)
-
-gemini_model = genai.GenerativeModel("gemini-1.5-pro")
-
 catalog_df = pd.read_csv("SHL_catalog.csv")
 
 def combine_row(row):
@@ -38,6 +28,8 @@ catalog_df['combined'] = catalog_df.apply(combine_row,axis=1)
 
 corpus = catalog_df['combined'].tolist()
 
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
 corpus_embeddings = model.encode(corpus,convert_to_tensor=True)
 
 def extract_url_from_text(text):
@@ -53,6 +45,14 @@ def extract_text_from_url(url):
         return ' '.join(soup.get_text().split())
     except Exception as e:
         return f"Error:{e}"
+
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
+
+
+genai.configure(api_key=api_key)
+
+gemini_model = genai.GenerativeModel("gemini-1.5-pro")
 
 def extract_features_with_llm(user_query):
     prompt = f"""
@@ -91,7 +91,6 @@ Only return the final, clean sentence — no explanations.
     return response.text.strip()
 
 def find_assessments(user_query,k=5):
-    model = SentenceTransformer('all-MiniLM-L6-v2')
     query_embedding = model.encode(user_query, convert_to_tensor = True)
     cosine_scores = util.cos_sim(query_embedding,corpus_embeddings)[0]
     top_k = min(k,len(corpus))
@@ -165,7 +164,7 @@ Assessments:
     response = gemini_model.generate_content(prompt)
     return response.text.strip()
 
-def query_handling_using_LLM_updated(query):
+def query_handling_using_LLM_updated(query, model, gemini_model, catalog_df, corpus, corpus_embeddings):
     url = extract_url_from_text(query)
 
     if url:
