@@ -2,6 +2,8 @@
 
 This project is an AI-powered recommendation system built to suggest the most relevant SHL assessments based on user queries, job descriptions, or unstructured input data. It combines NLP techniques and Large Language Models (LLMs) to provide accurate, efficient, and context-aware results through an intuitive frontend interface.
 
+Try it out @ https://shlassessmentrecommendationsystem.streamlit.app [Example Test Cases given below]
+
 ## Features
 
 - Recommends SHL assessments based on:
