@@ -164,7 +164,7 @@ Assessments:
     response = gemini_model.generate_content(prompt)
     return response.text.strip()
 
-def query_handling_using_LLM_updated(query, model, gemini_model, catalog_df, corpus, corpus_embeddings):
+def query_handling_using_LLM_updated(query, model = model , gemini_model = gemini_model, catalog_df = catalog_df, corpus = corpus, corpus_embeddings = corpus_embeddings):
     url = extract_url_from_text(query)
 
     if url:
