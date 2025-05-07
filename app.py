@@ -1,3 +1,5 @@
+import os
+os.environ["STREAMLIT_SERVER_ENABLE_FILE_WATCHER"] = "false"
 import streamlit as st
 import pandas as pd
 from query_functions import query_handling_using_LLM_updated
