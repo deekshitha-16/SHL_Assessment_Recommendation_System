@@ -1,12 +1,16 @@
-streamlit
+
 pandas
 
-
+# requirements.txt
+torch==2.0.1
+torchvision==0.15.2
+streamlit==1.45.0
+# Other dependencies...
 
 google-generativeai
 selenium
 numpy
-torch
+
 matplotlib
 requests
 bs4
